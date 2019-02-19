@@ -1,0 +1,15 @@
+{
+    "photo": "./images/car.jpg",
+    "model": "323",
+    "year": "2012",
+    "brand": "Mazda",
+    "price": 20000,
+    "features": {
+        "Miles_per_Gallon":18,
+        "Cylinders":8,
+        "Displacement":307,
+        "Horsepower":130,
+        "Weight_in_lbs":3504,
+        "Acceleration":12
+    }
+}
