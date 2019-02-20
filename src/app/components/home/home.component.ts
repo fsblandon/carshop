@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Car } from 'src/app/models/car';
+import { CarService } from './car.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  cars: Car[] = [];
+  compare = false;
+  car: Car = null;
+
+  constructor(private carService: CarService) { }
 
   ngOnInit() {
+    this.carService.getCars().subscribe(
+      (data) => {
+        this.cars = data;
+        this.cars.sort((a, b) => a.brand.localeCompare(b.brand));
+      }
+    );
+  }
+
+  selected(item: boolean) {
+    console.log(this.cars);
+    console.log(item);
+    this.cars.filter(d => this.car = d);
+    console.log(this.car.selected);
   }
 
 }

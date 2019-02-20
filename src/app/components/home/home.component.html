@@ -1,3 +1,31 @@
-<p>
-  home works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+      <button type="button" 
+              class="btn btn-primary">
+              Compare
+      </button>
+  </div>
+  <div class="row" *ngFor="let car of cars">
+    <div class="col-md-3">
+        <div class="card ">
+            <img  src="{{car.photo}}" 
+                  class="card-img-top" 
+                  alt="{{car.photo}}">
+            <div class="card-body">
+              <h1><span>Brand: </span>{{car.brand}}</h1>
+              <h4><span>Model: </span>{{car.model}}</h4>
+              <h4><span>Year: </span>{{car.year}}</h4>
+              <h4><span>Price: </span>${{car.price}}</h4>
+              <a  href="#" 
+                  class="btn btn-primary">
+                  Details
+              </a>
+              <input  type="checkbox"
+                      style="margin-left: 70%;"
+                      [(ngModel)]="car.selected"
+                      (click)="selected(car.selected)">
+            </div>
+          </div>
+    </div>
+  </div>
+</div>

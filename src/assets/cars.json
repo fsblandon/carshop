@@ -1,15 +1,92 @@
-{
-    "photo": "./images/car.jpg",
-    "model": "323",
-    "year": "2012",
-    "brand": "Mazda",
-    "price": 20000,
-    "features": {
-        "Miles_per_Gallon":18,
-        "Cylinders":8,
-        "Displacement":307,
-        "Horsepower":130,
-        "Weight_in_lbs":3504,
-        "Acceleration":12
+[
+    {
+        "photo": "../../../assets/images/mazda.jpg",
+        "model": "323",
+        "year": "2012",
+        "brand": "Mazda",
+        "price": 2000,
+        "features": {
+            "cylinders":8,
+            "displacement":307,
+            "horsepower":130,
+            "weight":3504,
+            "acceleration":12
+        },
+        "selected": false
+    },
+    {
+        "photo": "../../../assets/images/mazda.jpg",
+        "model": "323",
+        "year": "2012",
+        "brand": "BMW",
+        "price": 2000,
+        "features": {
+            "cylinders":8,
+            "displacement":307,
+            "horsepower":130,
+            "weight":3504,
+            "acceleration":12
+        },
+        "selected": false
+    },
+    {
+        "photo": "../../../assets/images/mazda.jpg",
+        "model": "323",
+        "year": "2012",
+        "brand": "Toyota",
+        "price": 2000,
+        "features": {
+            "cylinders":8,
+            "displacement":307,
+            "horsepower":130,
+            "weight":3504,
+            "acceleration":12
+        },
+        "selected": false
+    },
+    {
+        "photo": "../../../assets/images/mazda.jpg",
+        "model": "323",
+        "year": "2012",
+        "brand": "Chevrolet",
+        "price": 2000,
+        "features": {
+            "cylinders":8,
+            "displacement":307,
+            "horsepower":130,
+            "weight":3504,
+            "acceleration":12
+        },
+        "selected": false
+    },
+    {
+        "photo": "../../../assets/images/mazda.jpg",
+        "model": "323",
+        "year": "2012",
+        "brand": "Renault",
+        "price": 2000,
+        "features": {
+            "cylinders":8,
+            "displacement":307,
+            "horsepower":130,
+            "weight":3504,
+            "acceleration":12
+        },
+        "selected": false
+    },
+    {
+        "photo": "../../../assets/images/mazda.jpg",
+        "model": "323",
+        "year": "2012",
+        "brand": "Citroen",
+        "price": 2000,
+        "features": {
+            "cylinders":8,
+            "displacement":307,
+            "horsepower":130,
+            "weight":3504,
+            "acceleration":12
+        },
+        "selected": false
     }
-}
+]
