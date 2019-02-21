@@ -8,13 +8,11 @@ import { HomeComponent } from '../home/home.component';
 })
 export class CompareComponent implements OnInit {
 
-  @ViewChild(HomeComponent) compare;
   items: any[] = [];
 
   constructor() { }
 
   ngOnInit() {
     this.items = JSON.parse(localStorage.getItem('compare'));
-    console.log(this.items);
   }
 }

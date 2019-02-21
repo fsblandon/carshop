@@ -1,12 +1,12 @@
 [
     {
-        "photo": "../../../assets/images/mazda.jpg",
+        "photo": "../../../assets/images/mazda.png",
         "model": "323",
         "year": "2012",
         "brand": "Mazda",
-        "price": 2000,
+        "price": 1000,
         "features": {
-            "cylinders":8,
+            "cylinders":1,
             "displacement":307,
             "horsepower":130,
             "weight":3504,
@@ -15,13 +15,13 @@
         "selected": false
     },
     {
-        "photo": "../../../assets/images/mazda.jpg",
-        "model": "323",
+        "photo": "../../../assets/images/bmw.png",
+        "model": "wolf",
         "year": "2012",
         "brand": "BMW",
-        "price": 2000,
+        "price": 3500,
         "features": {
-            "cylinders":8,
+            "cylinders":2,
             "displacement":307,
             "horsepower":130,
             "weight":3504,
@@ -30,13 +30,13 @@
         "selected": false
     },
     {
-        "photo": "../../../assets/images/mazda.jpg",
-        "model": "323",
+        "photo": "../../../assets/images/toyota.png",
+        "model": "corolla",
         "year": "2012",
         "brand": "Toyota",
-        "price": 2000,
+        "price": 2500,
         "features": {
-            "cylinders":8,
+            "cylinders":3,
             "displacement":307,
             "horsepower":130,
             "weight":3504,
@@ -45,13 +45,13 @@
         "selected": false
     },
     {
-        "photo": "../../../assets/images/mazda.jpg",
-        "model": "323",
+        "photo": "../../../assets/images/chevrolet.png",
+        "model": "spark",
         "year": "2012",
         "brand": "Chevrolet",
-        "price": 2000,
+        "price": 1800,
         "features": {
-            "cylinders":8,
+            "cylinders":4,
             "displacement":307,
             "horsepower":130,
             "weight":3504,
@@ -60,13 +60,13 @@
         "selected": false
     },
     {
-        "photo": "../../../assets/images/mazda.jpg",
-        "model": "323",
+        "photo": "../../../assets/images/renault.png",
+        "model": "logan",
         "year": "2012",
         "brand": "Renault",
-        "price": 2000,
+        "price": 2400,
         "features": {
-            "cylinders":8,
+            "cylinders":5,
             "displacement":307,
             "horsepower":130,
             "weight":3504,
@@ -75,13 +75,13 @@
         "selected": false
     },
     {
-        "photo": "../../../assets/images/mazda.jpg",
-        "model": "323",
+        "photo": "../../../assets/images/citroen.png",
+        "model": "up",
         "year": "2012",
         "brand": "Citroen",
-        "price": 2000,
+        "price": 4500,
         "features": {
-            "cylinders":8,
+            "cylinders":6,
             "displacement":307,
             "horsepower":130,
             "weight":3504,

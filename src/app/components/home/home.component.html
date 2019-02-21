@@ -1,5 +1,19 @@
+<nav class="navbar fixed-top navbar-dark bg-info justify-content-between">
+    <a  class="navbar-brand" 
+        routerLink="/home">
+        Shopping Cars
+    </a>
+    <form class="form-inline">
+      <input  class="form-control mr-sm-2" 
+              type="search" 
+              placeholder="Search Car" 
+              aria-label="Search"
+              [(ngModel)]="searchText"
+              name="searchText">
+    </form>
+</nav>
 <div class="container-fluid">
-  <div class="row padding">
+  <div class="row padding compare_btn">
       <button type="button" 
               class="btn btn-primary"
               routerLink="/compare" 
@@ -11,7 +25,7 @@
   </div>
   <div class="row">
     <div  class="col-md-6 padding" 
-          *ngFor="let car of cars">
+          *ngFor="let car of cars | searchcar: searchText">
         <div  class="card">
             <img  src="{{car.photo}}" 
                   class="card-img-top" 
@@ -23,24 +37,64 @@
               <h4><span>Price: </span>${{car.price}}</h4>
               <div class="input-group">
                 <div class="input-group-prepend">
+                  <h5>Compare:</h5>
                   <div class="input-group-text">
                     <input  type="checkbox" 
                             aria-label="Large"
                             [(ngModel)]="car.selected"
                             (change)="selected(car)"
-                            [disabled]="itemselected.length > 1">
+                            [disabled]="itemselected.length > 1 && !car.selected">
                   </div>
                 </div>
               </div>
               <button type="button"
                       class="btn btn-primary button"
-                      routerLink="/detail" 
-                      routerLinkActive="active">
+                      data-toggle="modal" 
+                      data-target="#detailModal"
+                      (click)="modalData(car)">
                       Details
               </button>
-              
             </div>
           </div>
+        <!-- Modal -->
+        <div  class="modal fade" 
+              id="detailModal" 
+              tabindex="-1" 
+              role="dialog"
+              aria-hidden="true">
+          <div  class="modal-dialog modal-dialog-centered modal-xl" 
+                role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Features of: {{carSpec.brand}} - {{carSpec.model}}</h5>
+                <button type="button" 
+                        class="close" 
+                        data-dismiss="modal" 
+                        aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img  src="{{carSpec.photo}}" 
+                      class="card-img-top" 
+                      alt="{{carSpec.photo}}">
+                      <h1><span>Cylinders: </span>{{carSpec.features.cylinders}} </h1>
+                      <h4><span>Displacement: </span>{{carSpec.features.displacement}}</h4>
+                      <h4><span>Horsepower: </span>{{carSpec.features.horsepower}}</h4>
+                      <h4><span>Weight: </span>${{carSpec.features.weight}}</h4>
+                      <h4><span>Acceleration: </span>${{carSpec.features.acceleration}}</h4>
+              </div>
+              <div class="modal-footer">
+                <button type="button" 
+                        class="btn btn-secondary" 
+                        data-dismiss="modal">
+                        Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
     </div>
   </div>
 </div>
