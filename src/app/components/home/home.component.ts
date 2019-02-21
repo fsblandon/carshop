@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from 'src/app/models/car';
-import { CarService } from './car.service';
+import { CarService } from '../../services/car.service';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +10,7 @@ import { CarService } from './car.service';
 export class HomeComponent implements OnInit {
 
   cars: Car[] = [];
-  compare = false;
-  car: Car = null;
+  itemselected: any[] = [];
 
   constructor(private carService: CarService) { }
 
@@ -24,11 +23,11 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  selected(item: boolean) {
-    console.log(this.cars);
-    console.log(item);
-    this.cars.filter(d => this.car = d);
-    console.log(this.car.selected);
+  selected(car: Car) {
+    if (this.itemselected.length <= 2) {
+      this.itemselected.push(car);
+      localStorage.setItem('compare', JSON.stringify(this.itemselected));
+    }
   }
 
 }

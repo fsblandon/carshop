@@ -6,7 +6,15 @@ import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { CompareComponent } from './components/compare/compare.component';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: 'detail', component: DetailComponent },
+  { path: 'compare', component: CompareComponent },
+  { path: '**', component: HomeComponent }
+];
 
 @NgModule({
   declarations: [
@@ -18,9 +26,11 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [RouterModule]
 })
 export class AppModule { }

@@ -1,29 +1,44 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row padding">
       <button type="button" 
-              class="btn btn-primary">
+              class="btn btn-primary"
+              routerLink="/compare" 
+              routerLinkActive="active"
+              [disabled]="itemselected.length < 2">
               Compare
+              <span class="badge badge-light">{{itemselected.length}}</span>
       </button>
   </div>
-  <div class="row" *ngFor="let car of cars">
-    <div class="col-md-3">
-        <div class="card ">
+  <div class="row">
+    <div  class="col-md-6 padding" 
+          *ngFor="let car of cars">
+        <div  class="card">
             <img  src="{{car.photo}}" 
                   class="card-img-top" 
                   alt="{{car.photo}}">
             <div class="card-body">
-              <h1><span>Brand: </span>{{car.brand}}</h1>
+              <h1><span>Brand: </span>{{car.brand}} </h1>
               <h4><span>Model: </span>{{car.model}}</h4>
               <h4><span>Year: </span>{{car.year}}</h4>
               <h4><span>Price: </span>${{car.price}}</h4>
-              <a  href="#" 
-                  class="btn btn-primary">
-                  Details
-              </a>
-              <input  type="checkbox"
-                      style="margin-left: 70%;"
-                      [(ngModel)]="car.selected"
-                      (click)="selected(car.selected)">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input  type="checkbox" 
+                            aria-label="Large"
+                            [(ngModel)]="car.selected"
+                            (change)="selected(car)"
+                            [disabled]="itemselected.length > 1">
+                  </div>
+                </div>
+              </div>
+              <button type="button"
+                      class="btn btn-primary button"
+                      routerLink="/detail" 
+                      routerLinkActive="active">
+                      Details
+              </button>
+              
             </div>
           </div>
     </div>
