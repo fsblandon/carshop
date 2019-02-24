@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-compare',

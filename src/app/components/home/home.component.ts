@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Car } from '../../shared/models/car';
 import { CarService } from '../../shared/services/car.service';
 
